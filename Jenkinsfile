@@ -30,6 +30,7 @@ pipeline {
             steps {
                 sh '''
                     echo "starting tests"
+                    ls
                     grep -q 'Learn Jenkins' public/index.html && echo "String found" || echo "String not found"
                     npm test          
                 '''
